@@ -6,10 +6,20 @@ class AppWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      
+    return MaterialApp(
+        theme: ThemeData.light().copyWith(
+          inputDecorationTheme: InputDecorationTheme(
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(8),
+            ),
+          ),
+          primaryColor: Colors.green[800],
+          floatingActionButtonTheme: FloatingActionButtonThemeData(
+            backgroundColor: Colors.blue[900],
+          ),
+        ),
         debugShowCheckedModeBanner: false,
         title: "B Social",
-        home: SignInPage());
+        home: const SignInPage());
   }
 }
